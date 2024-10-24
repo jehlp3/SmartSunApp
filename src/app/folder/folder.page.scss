@@ -2,9 +2,10 @@ ion-item{
   --size: 60px;
   --border-radius: 14px;
 }
-
-ion-menu-button {
-  color: var(--ion-color-primary);
+ion-input{
+  --placeholder-color: #ffc409;
+  --color: #000000;
+  
 }
 
 #container {

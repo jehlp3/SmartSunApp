@@ -19,14 +19,23 @@
 
   <div id="container">
     <strong class="capitalize"></strong>
+    
     <ion-label>Consumo de Energia</ion-label>
     <ion-item>
-      <ion-input label="KWh/mês" placeholder="Consumo Médio" ></ion-input>
-      <ion-button shape="round">Calcular</ion-button>
+      <!-- <ion-label position="floating">KWh/mês</ion-label> -->
+      <ion-input label="KWh/mês" placeholder="Consumo Médio" type="number" [(ngModel)]="numero1"></ion-input>
     </ion-item>
+  
     <ion-item>
-      <ion-input label="KWh/mês" placeholder="Consumo Médio" ></ion-input>
+      <ion-input label="R$" placeholder="Valor Médio Gasto por Mês" type="number" [(ngModel)]="numero2"></ion-input>
     </ion-item>
+  
+    <ion-button expand="block" (click)="calcularGastoMedio()">Calcular</ion-button>
+  
+    <ion-label *ngIf="resultado !== null" color="warning"><br>Gasto Médio por KW: R${{ resultado }}</ion-label>
+    
   </div>
+
+  
 </ion-content>
 <!-- Consumo Médio, Gasto médio por Kw, M² de placa, investimento -->
